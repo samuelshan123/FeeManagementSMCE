@@ -25,10 +25,10 @@ public class ProfileActivity extends AppCompatActivity {
         }
 
 
-        textViewId = (TextView) findViewById(R.id.textViewId);
+
         textViewUsername = (TextView) findViewById(R.id.textViewUsername);
         textViewregno = (TextView) findViewById(R.id.textregno);
-        textViewdob = (TextView) findViewById(R.id.textdob);
+
         textViewtotal=(TextView)findViewById(R.id.texttotal);
 
 
@@ -36,10 +36,10 @@ public class ProfileActivity extends AppCompatActivity {
         User user = SharedPrefManager.getInstance(this).getUser();
 
         //setting the values to the textviews
-        textViewId.setText(String.valueOf(user.getId()));
+
         textViewUsername.setText(user.getUsername());
         textViewregno.setText(user.getRegno());
-        textViewdob.setText(user.getDob());
+
         textViewtotal.setText(user.getTotal());
 
         //when the user presses logout button

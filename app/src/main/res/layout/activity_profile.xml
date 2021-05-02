@@ -1,134 +1,488 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".ProfileActivity">
+    tools:context=".ProfileActivity"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TableLayout
-            android:layout_margin="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <TableRow>
-
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="ID "
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:id="@+id/textViewId"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="1"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Name"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:id="@+id/textViewUsername"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="probelalkhan"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Register Number"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-                <TextView
-                    android:id="@+id/textregno"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="123321123123"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Date of Birth"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-                <TextView
-                    android:id="@+id/textdob"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="2001-07-29"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-            </TableRow>
-
-            <TableRow >
-
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Total Fee"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-                <TextView
-                    android:id="@+id/texttotal"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="50000"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-            </TableRow>
-        </TableLayout>
-
-        <Button
-            android:id="@+id/buttonLogout"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logout" />
-    </LinearLayout>
-</RelativeLayout>
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="30dp"
+                android:paddingBottom="20dp"
+                tools:context=".PreviousFeesDetail">
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:context=".ProfileActivity">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="Name"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/textViewUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:paddingRight="10dp"
+                        android:text="@string/student_name"
+                        android:textColor="@color/design_default_color_on_secondary"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Roll Number"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textregno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_17ruec123"
+                        android:textColor="@color/design_default_color_on_secondary"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="80sp"
+                    tools:context=".PreviousFeesDetail">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15sp"
+                        android:text="Total balance"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/TotalBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:text="@string/_4_588"
+                        android:textColor="@color/teal_200"
+
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="6sp"
+                android:layout_marginLeft="18sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginRight="18sp"
+                android:background="@color/teal_200" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18sp"
+                android:layout_marginRight="18sp"
+
+                >
+
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#8AC1F8AB"
+                    tools:layout_editor_absoluteX="33dp"
+                    tools:layout_editor_absoluteY="226dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="S.No"
+                        android:textColor="@color/teal_200"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="1"
+                        android:width="170sp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Particulars"
+                        android:textColor="@color/teal_200"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="Amount"
+                        android:textColor="@color/teal_200"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5sp"
+                    android:background="@color/black" />
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    tools:layout_editor_absoluteX="33dp"
+                    tools:layout_editor_absoluteY="226dp">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="1"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:maxWidth="220sp"
+                        android:padding="10dp"
+                        android:text="Tuition"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/TuitionFee"
+                        android:layout_width="78dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="1,50,000"
+                        android:textSize="21sp" />
+
+
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5sp"
+                    android:background="@color/black" />
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    tools:layout_editor_absoluteX="33dp"
+                    tools:layout_editor_absoluteY="226dp">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="2"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:maxWidth="220sp"
+                        android:padding="10dp"
+                        android:text="Book"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/BookFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="50,000"
+                        android:textSize="21sp" />
+
+
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5sp"
+                    android:background="@color/black" />
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    tools:layout_editor_absoluteX="33dp"
+                    tools:layout_editor_absoluteY="226dp">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="3"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:maxWidth="220sp"
+                        android:padding="10dp"
+                        android:text="Transport"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/TransportFee"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="3,000"
+                        android:textSize="21sp" />
+
+
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5sp"
+                    android:background="@color/black" />
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    tools:layout_editor_absoluteX="33dp"
+                    tools:layout_editor_absoluteY="226dp">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="4"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:maxWidth="220sp"
+                        android:padding="10dp"
+                        android:text="Mess"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/MessFee"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="2000"
+                        android:textSize="21sp" />
+
+
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5sp"
+                    android:background="@color/black" />
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    tools:layout_editor_absoluteX="33dp"
+                    tools:layout_editor_absoluteY="226dp">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="5"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:maxWidth="220sp"
+                        android:padding="10dp"
+                        android:text="Hostel"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/HostelFee"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="4000"
+                        android:textSize="21sp" />
+
+
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5sp"
+                    android:background="@color/black" />
+
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="180sp"
+                android:paddingTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:context=".PreviousFeesDetail">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:paddingRight="10dp"
+                        android:text="Total Amount"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount Paid"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:paddingTop="10sp"
+                        android:paddingRight="10dp"
+                        android:text="Total Balance "
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:context=".PreviousFeesDetail">
+
+                    <TextView
+
+                        android:id="@+id/texttotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:paddingRight="10dp"
+                        android:text="13,000"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/PaidAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1,200"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/BalanceAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10sp"
+                        android:text="@string/_4_588"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/buttonLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Logout" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Pay Now"
+                       />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
