@@ -96,8 +96,9 @@ public class MainActivity extends AppCompatActivity {
                                 User user = new User(
                                         userJson.getInt("id"),
                                         userJson.getString("name"),
-                                        userJson.getInt("regno"),
-                                        userJson.getString("dob")
+                                        userJson.getString("regno"),
+                                        userJson.getString("dob"),
+                                        userJson.getString("total")
                                 );
 
                                 //storing the user in shared preferences

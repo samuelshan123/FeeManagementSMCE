@@ -18,6 +18,7 @@ public class SharedPrefManager {
     private static final String KEY_REGNO = "keyregno";
     private static final String KEY_DOB = "keydob";
     private static final String KEY_ID = "keyid";
+    private static final String KEY_TOTAL= "keytotal";
 
     private static SharedPrefManager mInstance;
     private static Context mCtx;
@@ -40,8 +41,9 @@ public class SharedPrefManager {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(KEY_ID, user.getId());
         editor.putString(KEY_USERNAME, user.getUsername());
-        editor.putInt(KEY_REGNO, user.getRegno());
+        editor.putString(KEY_REGNO, user.getRegno());
         editor.putString(KEY_DOB, user.getDob());
+        editor.putString(KEY_TOTAL, user.getTotal());
         editor.apply();
     }
 
@@ -57,8 +59,9 @@ public class SharedPrefManager {
         return new User(
                 sharedPreferences.getInt(KEY_ID, -1),
                 sharedPreferences.getString(KEY_USERNAME, null),
-                sharedPreferences.getInt(KEY_REGNO,4),
-                sharedPreferences.getString(KEY_DOB, null)
+                sharedPreferences.getString(KEY_REGNO,null),
+                sharedPreferences.getString(KEY_DOB, null),
+                sharedPreferences.getString(KEY_TOTAL,null)
         );
     }
 

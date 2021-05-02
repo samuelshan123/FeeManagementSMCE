@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    TextView textViewId, textViewUsername, textViewregno, textViewdob;
+    TextView textViewId, textViewUsername, textViewregno, textViewdob,textViewtotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
         textViewUsername = (TextView) findViewById(R.id.textViewUsername);
         textViewregno = (TextView) findViewById(R.id.textregno);
         textViewdob = (TextView) findViewById(R.id.textdob);
+        textViewtotal=(TextView)findViewById(R.id.texttotal);
 
 
         //getting the current user
@@ -37,8 +38,9 @@ public class ProfileActivity extends AppCompatActivity {
         //setting the values to the textviews
         textViewId.setText(String.valueOf(user.getId()));
         textViewUsername.setText(user.getUsername());
-        textViewregno.setText(String.valueOf(user.getRegno()));
+        textViewregno.setText(user.getRegno());
         textViewdob.setText(user.getDob());
+        textViewtotal.setText(user.getTotal());
 
         //when the user presses logout button
         //calling the logout method
